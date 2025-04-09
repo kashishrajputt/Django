@@ -9,3 +9,6 @@ def all_app(request):
 def app_details(request, app_id):
     app = get_object_or_404(AppVarity, pk = app_id)
     return render(request, 'app/app_details.html',{'app':app})
+
+def app_store_view(request):
+    return render(request, 'app/app_stores.html')
